@@ -2,6 +2,8 @@ package com.reyozic.hackathon
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import com.google.firebase.messaging.FirebaseMessaging
 import com.reyozic.hackathon.ui.controls.loader.HWTAnimatedLoader
 
 class MainActivity : AppCompatActivity() {
@@ -9,8 +11,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val mLoader: HWTAnimatedLoader = HWTAnimatedLoader.newInstance(this)
-
-        mLoader.show()
+        FirebaseMessaging.getInstance().token.addOnCompleteListener {
+            task->
+            Log.e("Prueba",task.result!!)
+        }
     }
 }

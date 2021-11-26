@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "444941488402",
+    "firebase_url": "https://fir-ejemplo-a45e7.firebaseio.com",
+    "project_id": "fir-ejemplo-a45e7",
+    "storage_bucket": "fir-ejemplo-a45e7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:444941488402:android:7b9c6cefd6164cae22a3cb",
+        "android_client_info": {
+          "package_name": "com.reyozic.hackathon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "444941488402-36jr3b7994bo8k6d24ifj5g6hcl55nra.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdYstRW9Ipe2y7LvCHqVnzZRJBVn3QkKM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "444941488402-36jr3b7994bo8k6d24ifj5g6hcl55nra.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
