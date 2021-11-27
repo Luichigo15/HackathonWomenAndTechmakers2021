@@ -3,5 +3,9 @@
     <string name="questions_menu">Preguntas</string>
     <string name="stories_menu">Historias</string>
     <string name="profile_menu">Perfil</string>
-    <string name="login">Inicia sesion</string>
+    <string name="login">Inicia sesión</string>
+    <string name="welcome">Bienvenida a tu lugar seguro</string>
+    <string name="advice">Aprende a defenderte ante cualquier\nposible acaso!</string>
+    <string name="email">Email</string>
+    <string name="password">Contraseña</string>
 </resources>

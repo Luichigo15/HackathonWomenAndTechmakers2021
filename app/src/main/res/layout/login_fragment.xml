@@ -4,23 +4,94 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <TextView
+        android:id="@+id/login_label"
+        style="@style/HWTTextTitleBottomSheet"
+        android:text="@string/welcome"
+        android:textSize="@dimen/_20ssp"
+        android:textColor="@color/primary_color"
+        app:layout_constraintBottom_toTopOf="@id/login_label_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/login_label_name"
+        style="@style/HWTTextTitleBottomSheet"
+        android:text="@string/app_name"
+        android:textSize="@dimen/_20ssp"
+        android:textColor="@color/accent_color"
+        app:layout_constraintBottom_toTopOf="@id/login_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_label"/>
+
     <ImageView
         android:id="@+id/login_icon"
-        android:layout_width="@dimen/_250sdp"
-        android:layout_height="@dimen/_250sdp"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_200sdp"
         android:src="@drawable/ic_ladies"
-        app:layout_constraintTop_toBottomOf="@id/login_label"
+        app:layout_constraintBottom_toTopOf="@id/login_advice"
+        app:layout_constraintTop_toBottomOf="@id/login_label_name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <TextView
-        android:id="@+id/login_label"
+        android:id="@+id/login_advice"
         style="@style/HWTTextTitleBottomSheet"
-        android:text="@string/login"
-        android:textSize="@dimen/_24ssp"
-        android:textColor="@color/accent_color"
+        android:text="@string/advice"
+        android:textSize="@dimen/_14ssp"
+        android:textColor="@color/gray"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/input_layout_email"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/login_icon"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_email"
+        style="@style/HWTInputLayout"
+        android:layout_width="match_parent"
+        android:hint="@string/email"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        app:layout_constraintBottom_toTopOf="@id/input_layout_password"
+        app:layout_constraintTop_toBottomOf="@id/login_advice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_email"
+            style="@style/HWTEditText"
+            android:inputType="textEmailAddress"
+            android:nextFocusDown="@id/txt_password" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_password"
+        style="@style/HWTInputLayout"
+        android:layout_width="match_parent"
+        android:hint="@string/password"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        app:layout_constraintBottom_toTopOf="@id/btn_login"
+        app:layout_constraintTop_toBottomOf="@id/input_layout_email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_password"
+            style="@style/HWTEditText"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_login"
+        style="@style/HWTMainButtonBottom"
+        android:text="@string/login"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:layout_marginHorizontal="@dimen/_45sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_layout_password"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
