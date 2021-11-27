@@ -22,6 +22,8 @@
     <string name="while_hass">¿Qué hacer durante el acoso?</string>
     <string name="search_question">Buscar pregunta</string>
 
+    <string name="answer_title">Respuesta:</string>
+
     <string name="error_loading">Error cargando datos</string>
 
     <string name="not_channel">General</string>
