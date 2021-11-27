@@ -25,7 +25,7 @@ class ResultQuestionsViewHelper(
         btnBack.setOnClickListener{mListener.backPressed()}
     }
 
-    private fun initRecycler(questions:MutableList<QuestionModel>){
+    fun initRecycler(questions:MutableList<QuestionModel>){
         adapterQuestions = QuestionsAdapter(questions)
         recyclerQuestions.apply {
             setHasFixedSize(true)
