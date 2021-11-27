@@ -8,9 +8,12 @@
         <entry key="..\:/Users/user/Documents/Otros/Hackathon/app/src/main/res/layout/loader_dialog.xml" value="0.1" />
         <entry key="..\:/Users/user/Documents/Otros/Hackathon/app/src/main/res/layout/login_fragment.xml" value="0.275" />
         <entry key="..\:/Users/user/Documents/Otros/Hackathon/app/src/main/res/menu/tabs.xml" value="0.275" />
+        <entry key="app/src/main/res/drawable/shape_search_bar.xml" value="0.15" />
         <entry key="app/src/main/res/layout/activity_first.xml" value="0.15534420289855072" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/item_question.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/login_fragment.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/questions_fragment.xml" value="0.19322916666666667" />
       </map>
     </option>
   </component>

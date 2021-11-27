@@ -1,12 +1,19 @@
 <resources>
     <string name="app_name">Your faithful friend</string>
+
     <string name="questions_menu">Preguntas</string>
     <string name="stories_menu">Historias</string>
     <string name="profile_menu">Perfil</string>
+
     <string name="login">Inicia sesión</string>
     <string name="welcome">Bienvenida a tu lugar seguro</string>
     <string name="advice">Aprende a defenderte ante cualquier\nposible acoso!</string>
     <string name="email">Email</string>
     <string name="password">Contraseña</string>
     <string name="refuse_login">Completa los campos</string>
+
+    <string name="before_hass">¿Que hacer antes del acoso?</string>
+    <string name="after_hass">¿Que hacer despues del acoso?</string>
+    <string name="while_hass">¿Que hacer durante el acoso?</string>
+    <string name="search_question">Buscar pregunta</string>
 </resources>
