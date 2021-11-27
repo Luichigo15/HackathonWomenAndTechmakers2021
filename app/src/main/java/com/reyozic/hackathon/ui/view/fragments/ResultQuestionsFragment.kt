@@ -8,7 +8,7 @@ import com.reyozic.hackathon.databinding.ResultQuestionsFragmentBinding
 import com.reyozic.hackathon.domain.model.QuestionModel
 import com.reyozic.hackathon.domain.model.TypeQuestions
 import com.reyozic.hackathon.ui.bases.HWTBaseFragment
-import com.reyozic.hackathon.ui.view.AnswerBottomSheet
+import com.reyozic.hackathon.ui.view.bottomsheet.AnswerBottomSheet
 import com.reyozic.hackathon.ui.view.viewhelpers.ResultQuestionsViewHelper
 
 class ResultQuestionsFragment():HWTBaseFragment<ResultQuestionsFragmentBinding>(),ResultQuestionsViewHelper.Listener {

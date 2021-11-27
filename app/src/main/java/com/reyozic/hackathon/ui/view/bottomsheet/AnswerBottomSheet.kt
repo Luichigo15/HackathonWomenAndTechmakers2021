@@ -1,4 +1,4 @@
-package com.reyozic.hackathon.ui.view
+package com.reyozic.hackathon.ui.view.bottomsheet
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,7 +9,7 @@ import com.reyozic.hackathon.domain.model.TypeQuestions
 import com.reyozic.hackathon.ui.bases.HWTBaseBottomSheet
 import com.reyozic.hackathon.ui.view.viewhelpers.AnswerViewHelper
 
-class AnswerBottomSheet() : HWTBaseBottomSheet<AnswerFragmentBinding>(){
+class AnswerBottomSheet() : HWTBaseBottomSheet<AnswerFragmentBinding>(),AnswerViewHelper.Listener{
 
     private lateinit var mViewHelper: AnswerViewHelper
 
@@ -18,7 +18,7 @@ class AnswerBottomSheet() : HWTBaseBottomSheet<AnswerFragmentBinding>(){
 
     companion object{
         @JvmStatic
-        fun newInstance():AnswerBottomSheet = AnswerBottomSheet()
+        fun newInstance(): AnswerBottomSheet = AnswerBottomSheet()
     }
 
     override fun setupBottomSheetView(
@@ -31,12 +31,16 @@ class AnswerBottomSheet() : HWTBaseBottomSheet<AnswerFragmentBinding>(){
     }
 
     override fun initElements() {
-        mViewHelper = AnswerViewHelper(binding,mContext)
+        mViewHelper = AnswerViewHelper(binding,mContext,this)
         mViewHelper.loadData(answer,type)
     }
 
     fun loadData(answerR:String,type:TypeQuestions){
         this.answer = answerR
         this.type = type
+    }
+
+    override fun dismissBottom() {
+        this.dismiss()
     }
 }

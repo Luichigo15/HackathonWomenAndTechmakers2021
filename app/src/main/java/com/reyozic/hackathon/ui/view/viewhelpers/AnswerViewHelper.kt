@@ -8,6 +8,7 @@ import com.reyozic.hackathon.domain.model.TypeQuestions
 class AnswerViewHelper(
     val binding: AnswerFragmentBinding,
     val context: Context,
+    val mListener:Listener
 ) {
 
     private val icon = binding.ivAnswer
@@ -20,7 +21,7 @@ class AnswerViewHelper(
 
     private fun initElements() {
         btnClose.setOnClickListener {
-
+            mListener.dismissBottom()
         }
     }
 
@@ -37,5 +38,9 @@ class AnswerViewHelper(
         )
 
         answer.text = answerR
+    }
+
+    interface Listener{
+        fun dismissBottom()
     }
 }
