@@ -38,6 +38,8 @@
                 android:layout_width="@dimen/_20sdp"
                 android:layout_height="@dimen/_20sdp"
                 android:src="@drawable/ic_favorite"
+                android:clickable="true"
+                android:tag="nolike"
                 android:layout_marginTop="@dimen/_15sdp"
                 android:layout_marginStart="@dimen/_15sdp"
                 app:layout_constraintTop_toBottomOf="@id/question"

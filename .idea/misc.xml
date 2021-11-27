@@ -12,6 +12,7 @@
         <entry key="app/src/main/res/layout/activity_first.xml" value="0.15534420289855072" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/item_question.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/item_search_bar.xml" value="0.1" />
         <entry key="app/src/main/res/layout/login_fragment.xml" value="0.18" />
         <entry key="app/src/main/res/layout/questions_fragment.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/result_questions_fragment.xml" value="0.33" />

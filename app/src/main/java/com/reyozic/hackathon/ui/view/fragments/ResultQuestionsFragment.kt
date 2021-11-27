@@ -33,7 +33,7 @@ class ResultQuestionsFragment():HWTBaseFragment<ResultQuestionsFragmentBinding>(
     }
 
     override fun initElements() {
-        mViewHelper = ResultQuestionsViewHelper(binding,this)
+        mViewHelper = ResultQuestionsViewHelper(binding,this,mContext)
         mViewHelper.initRecycler(questions)
     }
 
