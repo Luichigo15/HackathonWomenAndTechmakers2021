@@ -10,10 +10,5 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        FirebaseMessaging.getInstance().token.addOnCompleteListener {
-            task->
-            Log.e("Prueba",task.result!!)
-        }
     }
 }

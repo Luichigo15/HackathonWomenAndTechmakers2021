@@ -1,6 +1,6 @@
 package com.reyozic.hackathon.api
 
-object HWTApiConstans {
+object HWTApiConstants {
 
     const val IMAGES_FIREBASE = "img"
 }
