@@ -20,4 +20,6 @@
     <string name="after_hass">¿Que hacer despues del acoso?</string>
     <string name="while_hass">¿Que hacer durante el acoso?</string>
     <string name="search_question">Buscar pregunta</string>
+
+    <string name="answer_title">Respuesta:</string>
 </resources>
