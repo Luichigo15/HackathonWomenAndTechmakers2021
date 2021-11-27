@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.reyozic.hackathon.databinding.ItemPostBinding
 import com.reyozic.hackathon.domain.model.PostModel
 
-class PostsViewHolder (item: View) : RecyclerView.ViewHolder(item){
+class PostsViewHolder (item: View,val mListener: Listener) : RecyclerView.ViewHolder(item){
 
     var binding = ItemPostBinding.bind(item)
     lateinit var mContext: Context
@@ -15,5 +15,13 @@ class PostsViewHolder (item: View) : RecyclerView.ViewHolder(item){
         binding.date.text = post.date
         binding.iconPost.setImageDrawable(post.getIcon(mContext))
         binding.title.text = post.title
+
+        binding.cardStory.setOnClickListener {
+            mListener.openComments(post)
+        }
+    }
+
+    interface Listener{
+        fun openComments(post:PostModel)
     }
 }

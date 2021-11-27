@@ -1,7 +1,6 @@
 package com.reyozic.hackathon.ui.view
 
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -27,7 +26,7 @@ class HWTMainActivity : AppCompatActivity(),QuestionsFragment.Listener, HWTInter
 
     private var resultQuestionsFragment: ResultQuestionsFragment = ResultQuestionsFragment.newInstance()
     private var questionsFragment: QuestionsFragment = QuestionsFragment.newInstance()
-    private var postsFragment:PostFragment = PostFragment.newInstsnce()
+    private var postsFragment:PostFragment = PostFragment.newInstance()
 
     private var actualFragment = HWTActualFragment.QUESTIONS
 

@@ -24,7 +24,8 @@
             android:id="@+id/story_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_10sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
             android:backgroundTint="@color/white"
             app:cardElevation="@dimen/_5sdp"
             app:cardCornerRadius="@dimen/_10sdp"
@@ -37,7 +38,7 @@
                 android:padding="@dimen/_10sdp">
 
                 <TextView
-                    android:id="@+id/date"
+                    android:id="@+id/story"
                     style="@style/HWTTextTitleBottomSheet"
                     android:layout_width="match_parent"
                     android:text="@string/test"
@@ -61,6 +62,7 @@
             style="@style/HWTEditText"
             android:layout_width="0dp"
             android:inputType="text"
+            android:elevation="@dimen/_5sdp"
             android:background="@drawable/shape_search_bar"
             android:layout_marginHorizontal="@dimen/_15sdp"
             android:layout_marginBottom="@dimen/_10sdp"
@@ -78,7 +80,7 @@
             app:fabSize="mini"
             app:srcCompat="@drawable/ic_send"
             android:layout_marginEnd="@dimen/_10sdp"
-            android:backgroundTint="@color/accent_color"
+            android:backgroundTint="@color/primary_color"
             app:layout_constraintStart_toEndOf="@id/txt_new_comment"
             app:layout_constraintBottom_toBottomOf="@id/txt_new_comment"
             app:layout_constraintTop_toTopOf="@id/txt_new_comment"
