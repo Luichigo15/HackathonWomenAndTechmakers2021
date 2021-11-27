@@ -8,4 +8,5 @@
     <string name="advice">Aprende a defenderte ante cualquier\nposible acoso!</string>
     <string name="email">Email</string>
     <string name="password">Contraseña</string>
+    <string name="refuse_login">Completa los campos</string>
 </resources>

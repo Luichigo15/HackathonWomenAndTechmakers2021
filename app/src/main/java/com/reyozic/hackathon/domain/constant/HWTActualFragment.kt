@@ -4,4 +4,5 @@ enum class HWTActualFragment {
     QUESTIONS,
     STORIES,
     PROFILE,
+    LOGIN,
 }
