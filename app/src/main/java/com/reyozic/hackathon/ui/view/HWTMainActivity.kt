@@ -15,6 +15,7 @@ import com.reyozic.hackathon.ui.controls.loader.HWTAnimatedLoader
 import com.reyozic.hackathon.ui.interfaces.HWTInterfaces
 import com.reyozic.hackathon.ui.presenter.HWTPresenter
 import com.reyozic.hackathon.ui.view.fragments.PostFragment
+import com.reyozic.hackathon.ui.view.fragments.ProfileFragment
 import com.reyozic.hackathon.ui.view.fragments.ResultQuestionsFragment
 import com.reyozic.hackathon.ui.view.fragments.QuestionsFragment
 
@@ -27,6 +28,7 @@ class HWTMainActivity : AppCompatActivity(),QuestionsFragment.Listener, HWTInter
     private var resultQuestionsFragment: ResultQuestionsFragment = ResultQuestionsFragment.newInstance()
     private var questionsFragment: QuestionsFragment = QuestionsFragment.newInstance()
     private var postsFragment:PostFragment = PostFragment.newInstance()
+    private var profileFragment:ProfileFragment = ProfileFragment.newInstance()
 
     private var actualFragment = HWTActualFragment.QUESTIONS
 
@@ -59,6 +61,7 @@ class HWTMainActivity : AppCompatActivity(),QuestionsFragment.Listener, HWTInter
             when(it.id){
                 R.id.tab_questions->fragmentContainer.updateFragmentContainer(questionsFragment,true)
                 R.id.tab_stories->loadPosts()
+                R.id.tab_profile->fragmentContainer.updateFragmentContainer(profileFragment,true)
             }
         }
     }
