@@ -5,13 +5,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.reyozic.hackathon.databinding.ResultQuestionsFragmentBinding
+import com.reyozic.hackathon.domain.model.QuestionModel
+import com.reyozic.hackathon.domain.model.TypeQuestions
 import com.reyozic.hackathon.ui.bases.HWTBaseFragment
 import com.reyozic.hackathon.ui.view.viewhelpers.ResultQuestionsViewHelper
 
 class ResultQuestionsFragment():HWTBaseFragment<ResultQuestionsFragmentBinding>(),ResultQuestionsViewHelper.Listener {
 
     private lateinit var mViewHelper: ResultQuestionsViewHelper
-    private lateinit var mListener:Listener
+    private lateinit var questions:MutableList<QuestionModel>
+    private lateinit var type:TypeQuestions
 
     companion object{
         @JvmStatic
@@ -32,17 +35,16 @@ class ResultQuestionsFragment():HWTBaseFragment<ResultQuestionsFragmentBinding>(
     }
 
     override fun initElements() {
-        mViewHelper = ResultQuestionsViewHelper(binding,this)
-    }
-
-    fun setListener(listener: Listener){
-        this.mListener = listener
+        mViewHelper = ResultQuestionsViewHelper(binding,this,mContext)
+        mViewHelper.initRecycler(questions,type)
     }
 
     override fun backPressed() {
         activity?.onBackPressed()
     }
 
-    interface Listener{
+    fun loadData(questions:MutableList<QuestionModel>,type:TypeQuestions){
+        this.questions = questions
+        this.type = type
     }
 }

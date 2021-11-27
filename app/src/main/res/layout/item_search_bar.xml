@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    android:id="@+id/zmr_is_tv"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/HWTItemSpinner"
+    android:textColor="@color/black"
+    />

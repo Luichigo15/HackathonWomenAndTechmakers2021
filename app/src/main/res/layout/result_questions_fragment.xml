@@ -32,7 +32,7 @@
         style="@style/HWTTextTitleBottomSheet"
         android:text="@string/before_hass"
         android:textSize="@dimen/_20ssp"
-        android:textColor="@color/color_text"
+        android:textColor="@color/accent_color"
         android:layout_marginStart="@dimen/_15sdp"
         android:layout_marginTop="@dimen/_15sdp"
         app:layout_constraintStart_toStartOf="parent"

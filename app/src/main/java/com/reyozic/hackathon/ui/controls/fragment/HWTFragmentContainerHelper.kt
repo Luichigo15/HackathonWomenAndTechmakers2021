@@ -51,4 +51,10 @@ class HWTFragmentContainerHelper(val mActivity: AppCompatActivity, private val m
         val firstId = fm.getBackStackEntryAt(0).id
         fm.popBackStack(firstId, FragmentManager.POP_BACK_STACK_INCLUSIVE)
     }
+
+    fun clearAll(fm: FragmentManager){
+        for (i in 0 until fm.backStackEntryCount) {
+            fm.popBackStack()
+        }
+    }
 }

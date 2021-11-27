@@ -1,15 +1,15 @@
 package com.reyozic.hackathon.ui.view.viewhelpers
 
-import com.reyozic.hackathon.databinding.LoginFragmentBinding
+import com.reyozic.hackathon.api.HWTApiConstants
 import com.reyozic.hackathon.databinding.QuestionsFragmentBinding
 
 class QuestionsViewHelper(
     mBinding: QuestionsFragmentBinding,
-    val mListener:Listner
+    val mListener:Listener
 ) {
 
     private val cvBefore = mBinding.cBefore
-    private val cvNow = mBinding.cNow
+    private val cvWhile = mBinding.cNow
     private val cvAfter = mBinding.cAfter
 
     init{
@@ -17,10 +17,12 @@ class QuestionsViewHelper(
     }
 
     private fun initElements(){
-
+        cvBefore.setOnClickListener { mListener.getQuestions(HWTApiConstants.QUESTIONS_BEFORE) }
+        cvAfter.setOnClickListener { mListener.getQuestions(HWTApiConstants.QUESTIONS_AFTER) }
+        cvWhile.setOnClickListener { mListener.getQuestions(HWTApiConstants.QUESTIONS_WHILE) }
     }
 
-    interface Listner{
-
+    interface Listener{
+        fun getQuestions(url:String)
     }
 }
