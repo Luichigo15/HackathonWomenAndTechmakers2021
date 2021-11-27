@@ -1,8 +1,10 @@
 package com.reyozic.hackathon.api
 
 import android.util.Log
+import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.messaging.FirebaseMessaging
+import com.reyozic.hackathon.domain.model.CommentModel
 import com.reyozic.hackathon.domain.model.PostModel
 import com.reyozic.hackathon.domain.model.QuestionModel
 import com.reyozic.hackathon.domain.userdata.HWTUser
@@ -29,10 +31,11 @@ class FirebaseService {
                     questions.addAll(
                         snapshot.result!!.children!!.map {
                             val hashMap = it.value as HashMap<String, Any>
+
                             QuestionModel(
                                 hashMap["question"] as String,
                                 hashMap["likes"] as Long,
-                                hashMap["answer"] as String
+                                hashMap["answer"] as String,
                             )
                         }
                     )
@@ -77,14 +80,27 @@ class FirebaseService {
                     postsR.addAll(
                         snapshot.result!!.children!!.map {
                             val hashMap = it.value as HashMap<String, Any>
+
+                            val comments = if(hashMap["comments"]!=null) hashMap["comments"] as ArrayList<Any> else ArrayList()
+                            val listComments = comments.filterNotNull().map{
+                                comment->
+                                    val hashMapCom = comment as HashMap<String, Any>
+                                    CommentModel(
+                                        hashMapCom["comment"] as String,
+                                        hashMapCom["date"] as String,
+                                    )
+                            }
+
                             PostModel(
                                 hashMap["title"] as String,
                                 hashMap["description"] as String,
                                 hashMap["icon"] as String,
-                                hashMap["date"] as String
+                                hashMap["date"] as String,
+                                listComments as MutableList<CommentModel>
                             )
                         }
                     )
+
                     callback.invoke(postsR)
                 } else {
                     fail.invoke()

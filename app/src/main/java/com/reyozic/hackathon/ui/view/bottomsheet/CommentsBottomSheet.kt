@@ -30,7 +30,7 @@ class CommentsBottomSheet : HWTBaseBottomSheet<CommentsFragmentBinding>(){
 
     override fun initElements() {
         mViewHelper = CommentsViewHelper(binding,mContext)
-        mViewHelper.loadData(post.description)
+        mViewHelper.loadData(post.description,post.comments)
     }
 
     fun loadData(post:PostModel){

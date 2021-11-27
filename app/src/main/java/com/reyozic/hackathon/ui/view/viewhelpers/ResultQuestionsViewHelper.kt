@@ -70,6 +70,13 @@ class ResultQuestionsViewHelper(
             )
         )
 
+        searchBar.setOnItemClickListener { adapterView, view, i, l ->
+            val questionString = adapterView.getItemAtPosition(i).toString()
+            val question = questions[questionsAdapter.indexOf(questionString)]
+
+            mListener.openAnswer(question.answer)
+        }
+
         when(type){
             TypeQuestions.AFTER->title.text = mContext.resources.getString(R.string.after_hass)
             TypeQuestions.BEFORE->title.text = mContext.resources.getString(R.string.before_hass)

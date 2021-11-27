@@ -9,6 +9,7 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="color_text">#1D2C3C</color>
+    <color name="color_comment">#818181</color>
     <color name="background_card">#f1f3f4</color>
     <color name="gray">#BEC0C1</color>
     <color name="primary_color">#C79FF2</color>A85BFB
