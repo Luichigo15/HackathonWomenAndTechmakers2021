@@ -1,4 +1,8 @@
 <resources>
+    <string name="questions">Que hacer contra el acoso</string>
+    <string name="questions_before">Antes</string>
+    <string name="questions_now">Ahora</string>
+    <string name="questions_after">Despues</string>
     <string name="app_name">Your faithful friend</string>
     <string name="questions_menu">Preguntas</string>
     <string name="stories_menu">Historias</string>
