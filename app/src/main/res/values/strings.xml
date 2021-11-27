@@ -29,4 +29,7 @@
     <string name="not_channel">General</string>
     <string name="not_description">Notificaciones en general</string>
 
+    <string name="need_help">¿Necesitas ayuda personalizada?</string>
+    <string name="contact_specialit">Contactar especialista</string>
+
 </resources>
