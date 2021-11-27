@@ -4,9 +4,11 @@ import android.content.Context
 import com.reyozic.hackathon.api.HWTInteractor
 import com.reyozic.hackathon.domain.model.QuestionModel
 import com.reyozic.hackathon.domain.model.TypeQuestions
+import com.reyozic.hackathon.domain.userdata.HWTUser
 import com.reyozic.hackathon.ui.interfaces.HWTInterfaces
 
-class HWTPresenter(val context: Context, private val view: HWTInterfaces.View): HWTInterfaces.Presenter {
+class HWTPresenter(val context: Context, private val view: HWTInterfaces.View):
+    HWTInterfaces.Presenter {
 
     val interactor: HWTInterfaces.Interactor = HWTInteractor(context, this)
 
@@ -20,5 +22,13 @@ class HWTPresenter(val context: Context, private val view: HWTInterfaces.View): 
 
     override fun errorService() {
         view.errorService()
+    }
+
+    override fun saveUser(user: HWTUser) {
+        interactor.saveUser(user)
+    }
+
+    override fun resultUser() {
+        view.resultUser()
     }
 }

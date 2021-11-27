@@ -15,6 +15,7 @@
     <string name="email">Email</string>
     <string name="password">Contraseña</string>
     <string name="refuse_login">Completa los campos</string>
+    <string name="unable_login">Intente de nuevo mas tarde</string>
 
     <string name="before_hass">¿Qué hacer antes del acoso?</string>
     <string name="after_hass">¿Qué hacer despues del acoso?</string>
@@ -22,4 +23,7 @@
     <string name="search_question">Buscar pregunta</string>
 
     <string name="error_loading">Error cargando datos</string>
+
+    <string name="not_channel">General</string>
+    <string name="not_description">Notificaciones en general</string>
 </resources>

@@ -2,12 +2,14 @@ package com.reyozic.hackathon.api
 
 import android.content.Context
 import com.reyozic.hackathon.domain.model.TypeQuestions
+import com.reyozic.hackathon.domain.userdata.HWTUser
 import com.reyozic.hackathon.domain.userdata.HWTUserControl
 import com.reyozic.hackathon.ui.interfaces.HWTInterfaces
 
-class HWTInteractor(private val context: Context, private val mCallback: HWTInterfaces.Presenter): HWTInterfaces.Interactor {
+class HWTInteractor(private val context: Context, private val mCallback: HWTInterfaces.Presenter):
+    HWTInterfaces.Interactor{
 
-    private val currentUser = HWTUserControl.getCurrentUser(context)
+    private lateinit var currentUser:HWTUserControl
     private val firabaseService = FirebaseService()
 
     override fun getQuestions(url: String) {
@@ -24,5 +26,16 @@ class HWTInteractor(private val context: Context, private val mCallback: HWTInte
         },{
             mCallback.errorService()
         })
+    }
+
+    override fun saveUser(user: HWTUser) {
+        firabaseService.saveUser(
+            user,{
+                mCallback.resultUser()
+            },
+            {
+                mCallback.errorService()
+            }
+        )
     }
 }

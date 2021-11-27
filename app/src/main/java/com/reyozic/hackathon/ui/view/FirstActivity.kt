@@ -47,7 +47,12 @@ class FirstActivity : AppCompatActivity(), LoginFragment.Listener{
         this.finish()
     }
 
-    override fun refuseLogin() {
-        Toast.makeText(this,resources.getString(R.string.refuse_login),Toast.LENGTH_SHORT).show()
+    override fun refuseLogin(case:Int) {
+        Toast.makeText(this,
+            if(case==1)
+                resources.getString(R.string.refuse_login)
+            else
+                resources.getString(R.string.unable_login)
+            ,Toast.LENGTH_SHORT).show()
     }
 }
