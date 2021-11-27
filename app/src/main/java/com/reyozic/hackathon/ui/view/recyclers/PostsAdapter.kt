@@ -7,10 +7,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.reyozic.hackathon.R
 import com.reyozic.hackathon.domain.model.PostModel
 
-class PostsAdapter (val posts:MutableList<PostModel>,val mContext:Context):RecyclerView.Adapter<PostsViewHolder>(){
+class PostsAdapter (val posts:MutableList<PostModel>,val mContext:Context,val mListener:PostsViewHolder.Listener):RecyclerView.Adapter<PostsViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostsViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_post,parent,false)
-        return PostsViewHolder(view)
+        return PostsViewHolder(view,mListener)
     }
 
     override fun onBindViewHolder(holder: PostsViewHolder, position: Int) {

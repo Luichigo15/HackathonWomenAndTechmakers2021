@@ -22,4 +22,10 @@ data class PostModel(
             }
         )!!
     }
+
+    override fun toString(): String {
+        return "PostModel(title='$title', description='$description', icon='$icon', date='$date', comments=$comments)"
+    }
+
+
 }

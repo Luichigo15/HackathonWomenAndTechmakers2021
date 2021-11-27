@@ -93,4 +93,10 @@
         <item name="android:paddingEnd">@dimen/_8sdp</item>
         <item name="android:minHeight">?android:attr/listPreferredItemHeightSmall</item>
     </style>
+
+    <style name="HWTPleca">
+        <item name="android:layout_width">@dimen/_40sdp</item>
+        <item name="android:layout_height">@dimen/_4sdp</item>
+        <item name="android:background">@drawable/pleca</item>
+    </style>
 </resources>

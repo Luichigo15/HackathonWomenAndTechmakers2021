@@ -12,12 +12,13 @@ import com.reyozic.hackathon.databinding.ResultQuestionsFragmentBinding
 import com.reyozic.hackathon.domain.model.QuestionModel
 import com.reyozic.hackathon.domain.model.TypeQuestions
 import com.reyozic.hackathon.ui.view.recyclers.QuestionsAdapter
+import com.reyozic.hackathon.ui.view.recyclers.QuestionsViewHolder
 
 class ResultQuestionsViewHelper(
     mBinding: ResultQuestionsFragmentBinding,
     val mListener: Listener,
     val mContext:Context
-) {
+):QuestionsViewHolder.Listener {
 
     private val btnBack = mBinding.btnBack
     private val searchBar = mBinding.searchBar
@@ -53,7 +54,7 @@ class ResultQuestionsViewHelper(
     }
 
     fun initRecycler(questions:MutableList<QuestionModel>,type:TypeQuestions){
-        adapterQuestions = QuestionsAdapter(questions,mContext)
+        adapterQuestions = QuestionsAdapter(questions,mContext,this)
         recyclerQuestions.apply {
             setHasFixedSize(true)
             layoutManager = LinearLayoutManager(context)
@@ -69,6 +70,13 @@ class ResultQuestionsViewHelper(
             )
         )
 
+        searchBar.setOnItemClickListener { adapterView, view, i, l ->
+            val questionString = adapterView.getItemAtPosition(i).toString()
+            val question = questions[questionsAdapter.indexOf(questionString)]
+
+            mListener.openAnswer(question.answer)
+        }
+
         when(type){
             TypeQuestions.AFTER->title.text = mContext.resources.getString(R.string.after_hass)
             TypeQuestions.BEFORE->title.text = mContext.resources.getString(R.string.before_hass)
@@ -78,5 +86,10 @@ class ResultQuestionsViewHelper(
 
     interface Listener{
         fun backPressed()
+        fun openAnswer(answer: String)
+    }
+
+    override fun openAnswer(answer: String) {
+        mListener.openAnswer(answer)
     }
 }

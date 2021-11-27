@@ -6,6 +6,7 @@
     android:layout_margin="@dimen/_5sdp">
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/question_card"
         app:cardCornerRadius="@dimen/_15sdp"
         android:backgroundTint="@color/background_card"
         android:layout_width="match_parent"
@@ -27,9 +28,11 @@
                 android:id="@+id/question"
                 style="@style/HWTTextTitleBottomSheet"
                 android:text="Pregunta"
+                android:layout_width="match_parent"
                 android:textSize="@dimen/_17ssp"
                 android:textColor="@color/color_text"
-                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"/>
 

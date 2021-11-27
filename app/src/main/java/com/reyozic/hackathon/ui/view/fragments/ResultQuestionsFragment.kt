@@ -8,6 +8,7 @@ import com.reyozic.hackathon.databinding.ResultQuestionsFragmentBinding
 import com.reyozic.hackathon.domain.model.QuestionModel
 import com.reyozic.hackathon.domain.model.TypeQuestions
 import com.reyozic.hackathon.ui.bases.HWTBaseFragment
+import com.reyozic.hackathon.ui.view.bottomsheet.AnswerBottomSheet
 import com.reyozic.hackathon.ui.view.viewhelpers.ResultQuestionsViewHelper
 
 class ResultQuestionsFragment():HWTBaseFragment<ResultQuestionsFragmentBinding>(),ResultQuestionsViewHelper.Listener {
@@ -16,7 +17,10 @@ class ResultQuestionsFragment():HWTBaseFragment<ResultQuestionsFragmentBinding>(
     private lateinit var questions:MutableList<QuestionModel>
     private lateinit var type:TypeQuestions
 
+    private var answerBottomSheet = AnswerBottomSheet.newInstance()
+
     companion object{
+        val TAG = ResultQuestionsFragment::class.java.simpleName
         @JvmStatic
         fun newInstance():ResultQuestionsFragment = ResultQuestionsFragment()
     }
@@ -41,6 +45,11 @@ class ResultQuestionsFragment():HWTBaseFragment<ResultQuestionsFragmentBinding>(
 
     override fun backPressed() {
         activity?.onBackPressed()
+    }
+
+    override fun openAnswer(answer: String) {
+        answerBottomSheet.loadData(answer,type)
+        answerBottomSheet.show(requireFragmentManager(),TAG)
     }
 
     fun loadData(questions:MutableList<QuestionModel>,type:TypeQuestions){

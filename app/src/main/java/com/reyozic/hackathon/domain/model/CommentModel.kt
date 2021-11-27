@@ -4,5 +4,7 @@ data class CommentModel(
     val comment:String,
     val date:String
 ){
-
+    override fun toString(): String {
+        return "CommentModel(comment='$comment', date='$date')"
+    }
 }
