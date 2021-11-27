@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">Hackathon</string>
+    <string name="app_name">Your faithful friend</string>
+    <string name="questions_menu">Preguntas</string>
+    <string name="stories_menu">Historias</string>
+    <string name="profile_menu">Perfil</string>
+    <string name="login">Inicia sesion</string>
 </resources>

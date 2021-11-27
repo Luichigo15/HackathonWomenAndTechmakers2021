@@ -4,7 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/user/Documents/Otros/Hackathon/app/src/main/res/drawable/background_bottom_sheet.xml" value="0.1" />
+        <entry key="..\:/Users/user/Documents/Otros/Hackathon/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/user/Documents/Otros/Hackathon/app/src/main/res/layout/loader_dialog.xml" value="0.1" />
+        <entry key="..\:/Users/user/Documents/Otros/Hackathon/app/src/main/res/layout/login_fragment.xml" value="0.275" />
+        <entry key="..\:/Users/user/Documents/Otros/Hackathon/app/src/main/res/menu/tabs.xml" value="0.275" />
       </map>
     </option>
   </component>

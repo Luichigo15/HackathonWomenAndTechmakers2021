@@ -25,4 +25,11 @@
         <item name="android:windowIsFloating">true</item>
         <item name="android:textColorPrimary">@android:color/white</item>
     </style>
+
+    <style name="HWTInputLayout">
+        <item name="android:layout_height">@dimen/_50sdp</item>
+        <item name="boxBackgroundColor">@color/background_card</item>
+        <item name="android:textColorHint">@color/gray</item>
+        <item name="boxStrokeColor">@color/accent_color</item>
+    </style>
 </resources>

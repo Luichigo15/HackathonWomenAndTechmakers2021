@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/tab_questions"
+        android:icon="@drawable/ic_question"
+        android:title="@string/questions_menu" />
+    <item
+        android:id="@+id/tab_stories"
+        android:icon="@drawable/ic_stories"
+        android:title="@string/stories_menu" />
+    <item
+        android:id="@+id/tab_profile"
+        android:icon="@drawable/ic_profile"
+        android:title="@string/profile_menu" />
+</menu>
