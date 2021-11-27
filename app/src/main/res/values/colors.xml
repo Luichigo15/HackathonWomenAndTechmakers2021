@@ -9,4 +9,7 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="color_text">#1D2C3C</color>
+    <color name="background_card">#f1f3f4</color>
+    <color name="primary_color">#F3CBF3</color>
+    <color name="accent_color">#C79FF2</color>
 </resources>
