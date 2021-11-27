@@ -7,12 +7,15 @@ import androidx.appcompat.app.AppCompatActivity
 import com.reyozic.hackathon.databinding.ActivityMainBinding
 import com.reyozic.hackathon.domain.constant.HWTActualFragment
 import com.reyozic.hackathon.ui.controls.fragment.HWTFragmentContainerHelper
+import com.reyozic.hackathon.ui.view.fragments.ResultQuestionsFragment
 
-class HWTMainActivity : AppCompatActivity(){
+class HWTMainActivity : AppCompatActivity(),ResultQuestionsFragment.Listener{
 
     private lateinit var binding: ActivityMainBinding
 
     private lateinit var fragmentContainer:HWTFragmentContainerHelper
+
+    private var resultQuestionsFragment: ResultQuestionsFragment = ResultQuestionsFragment.newInstance()
 
     private var actualFragment = HWTActualFragment.QUESTIONS
 
@@ -28,6 +31,10 @@ class HWTMainActivity : AppCompatActivity(){
 
     private fun initElements(){
         fragmentContainer = HWTFragmentContainerHelper(this,getViewContainer())
+
+        resultQuestionsFragment.setListener(this)
+
+        fragmentContainer.updateFragmentContainer(resultQuestionsFragment,true)
 
     }
 }

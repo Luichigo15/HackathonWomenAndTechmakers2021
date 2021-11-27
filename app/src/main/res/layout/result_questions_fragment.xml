@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/result_questions_container"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
@@ -10,6 +11,7 @@
         android:layout_height="@dimen/_40sdp"
         app:cardCornerRadius="@dimen/_10sdp"
         app:cardElevation="@dimen/_10sdp"
+        android:clickable="true"
         android:backgroundTint="@color/background_card"
         android:layout_marginStart="@dimen/_15sdp"
         android:layout_marginTop="@dimen/_15sdp"
@@ -19,6 +21,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:clickable="false"
             android:layout_margin="@dimen/_5sdp"
             android:src="@drawable/ic_back"/>
 
