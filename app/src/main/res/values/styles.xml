@@ -68,4 +68,16 @@
         <item name="cornerRadius">@dimen/_8sdp</item>
         <item name="elevation">@dimen/_10sdp</item>
     </style>
+
+    <style name="HWTAutoComplete" parent="@style/Widget.AppCompat.AutoCompleteTextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:backgroundTint">@color/black</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:popupBackground">@color/white</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:completionThreshold">1</item>
+        <item name="android:textColorHint">@color/gray</item>
+        <item name="android:paddingBottom">@dimen/_10sdp</item>
+    </style>
 </resources>
