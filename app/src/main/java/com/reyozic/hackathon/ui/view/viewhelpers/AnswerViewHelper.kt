@@ -1,23 +1,41 @@
 package com.reyozic.hackathon.ui.view.viewhelpers
 
 import android.content.Context
+import com.reyozic.hackathon.R
+import com.reyozic.hackathon.databinding.AnswerFragmentBinding
+import com.reyozic.hackathon.domain.model.TypeQuestions
 
 class AnswerViewHelper(
-    val binding:AnswerFragmentBinding,
-    val context:Context,
+    val binding: AnswerFragmentBinding,
+    val context: Context,
 ) {
 
-    private val icon = binding.
-    private val answer = binding.
-    private val btnClose = binding
+    private val icon = binding.ivAnswer
+    private val answer = binding.tvAnswer
+    private val btnClose = binding.ivCancel
 
-    init{
+    init {
         initElements()
     }
 
-    private fun initElements(){
-        btnClose.setOnClickListener{
+    private fun initElements() {
+        btnClose.setOnClickListener {
 
         }
+    }
+
+    fun loadData(answerR: String, type: TypeQuestions) {
+        icon.setImageDrawable(
+            context.getDrawable(
+                when (type) {
+                    TypeQuestions.AFTER -> R.drawable.ic_answer_after
+                    TypeQuestions.BEFORE -> R.drawable.ic_answer_before
+                    TypeQuestions.WHILE -> R.drawable.ic_answer_now
+                    else->R.drawable.ic_answer_after
+                }
+            )
+        )
+
+        answer.text = answerR
     }
 }

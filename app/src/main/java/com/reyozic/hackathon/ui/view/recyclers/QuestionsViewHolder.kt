@@ -8,7 +8,7 @@ import com.reyozic.hackathon.R
 import com.reyozic.hackathon.databinding.ItemQuestionBinding
 import com.reyozic.hackathon.domain.model.QuestionModel
 
-class QuestionsViewHolder(item: View) : RecyclerView.ViewHolder(item) {
+class QuestionsViewHolder(item: View,val mListener:Listener) : RecyclerView.ViewHolder(item) {
 
     var binding = ItemQuestionBinding.bind(item)
     lateinit var mContext: Context
@@ -26,5 +26,13 @@ class QuestionsViewHolder(item: View) : RecyclerView.ViewHolder(item) {
                 binding.like.setImageDrawable(mContext.getDrawable(R.drawable.ic_favorite))
             }
         }
+
+        binding.questionCard.setOnClickListener {
+            mListener.openAnswer(question.answer)
+        }
+    }
+
+    interface Listener{
+        fun openAnswer(answer:String)
     }
 }
