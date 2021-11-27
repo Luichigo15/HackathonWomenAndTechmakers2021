@@ -3,6 +3,7 @@ package com.reyozic.hackathon.ui.presenter
 import android.content.Context
 import com.reyozic.hackathon.api.HWTInteractor
 import com.reyozic.hackathon.domain.model.QuestionModel
+import com.reyozic.hackathon.domain.model.TypeQuestions
 import com.reyozic.hackathon.ui.interfaces.HWTInterfaces
 
 class HWTPresenter(val context: Context, private val view: HWTInterfaces.View): HWTInterfaces.Presenter {
@@ -13,8 +14,8 @@ class HWTPresenter(val context: Context, private val view: HWTInterfaces.View): 
         interactor.getQuestions(url)
     }
 
-    override fun resultQuestions(questions: MutableList<QuestionModel>) {
-        view.resultQuestions(questions)
+    override fun resultQuestions(questions: MutableList<QuestionModel>,type: TypeQuestions) {
+        view.resultQuestions(questions,type)
     }
 
     override fun errorService() {

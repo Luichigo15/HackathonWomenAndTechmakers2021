@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.reyozic.hackathon.R
 import com.reyozic.hackathon.databinding.ResultQuestionsFragmentBinding
 import com.reyozic.hackathon.domain.model.QuestionModel
+import com.reyozic.hackathon.domain.model.TypeQuestions
 import com.reyozic.hackathon.ui.view.recyclers.QuestionsAdapter
 
 class ResultQuestionsViewHelper(
@@ -21,6 +22,7 @@ class ResultQuestionsViewHelper(
     private val btnBack = mBinding.btnBack
     private val searchBar = mBinding.searchBar
     private val recyclerQuestions = mBinding.recyclerQuestions
+    private val title = mBinding.titleQuestions
 
     private lateinit var adapterQuestions:QuestionsAdapter
 
@@ -50,7 +52,7 @@ class ResultQuestionsViewHelper(
         )
     }
 
-    fun initRecycler(questions:MutableList<QuestionModel>){
+    fun initRecycler(questions:MutableList<QuestionModel>,type:TypeQuestions){
         adapterQuestions = QuestionsAdapter(questions,mContext)
         recyclerQuestions.apply {
             setHasFixedSize(true)
@@ -66,6 +68,12 @@ class ResultQuestionsViewHelper(
                 questionsAdapter
             )
         )
+
+        when(type){
+            TypeQuestions.AFTER->title.text = mContext.resources.getString(R.string.after_hass)
+            TypeQuestions.BEFORE->title.text = mContext.resources.getString(R.string.before_hass)
+            TypeQuestions.WHILE->title.text = mContext.resources.getString(R.string.while_hass)
+        }
     }
 
     interface Listener{

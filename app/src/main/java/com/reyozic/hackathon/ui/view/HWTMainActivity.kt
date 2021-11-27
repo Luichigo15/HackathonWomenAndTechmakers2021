@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.reyozic.hackathon.databinding.ActivityMainBinding
 import com.reyozic.hackathon.domain.constant.HWTActualFragment
 import com.reyozic.hackathon.domain.model.QuestionModel
+import com.reyozic.hackathon.domain.model.TypeQuestions
 import com.reyozic.hackathon.ui.controls.fragment.HWTFragmentContainerHelper
 import com.reyozic.hackathon.ui.view.fragments.ResultQuestionsFragment
 import com.reyozic.hackathon.ui.view.fragments.QuestionsFragment
@@ -38,9 +39,9 @@ class HWTMainActivity : AppCompatActivity(),QuestionsFragment.Listener {
         fragmentContainer.updateFragmentContainer(questionsFragment,true)
     }
 
-    override fun showQuestions(questions: MutableList<QuestionModel>) {
+    override fun showQuestions(questions: MutableList<QuestionModel>,type: TypeQuestions) {
         fragmentContainer.updateFragmentContainer(resultQuestionsFragment,false).also {
-            resultQuestionsFragment.loadData(questions)
+            resultQuestionsFragment.loadData(questions,type)
         }
 
     }
