@@ -2,6 +2,7 @@ package com.reyozic.hackathon.ui.presenter
 
 import android.content.Context
 import com.reyozic.hackathon.api.HWTInteractor
+import com.reyozic.hackathon.domain.model.PostModel
 import com.reyozic.hackathon.domain.model.QuestionModel
 import com.reyozic.hackathon.domain.model.TypeQuestions
 import com.reyozic.hackathon.domain.userdata.HWTUser
@@ -30,5 +31,13 @@ class HWTPresenter(val context: Context, private val view: HWTInterfaces.View):
 
     override fun resultUser() {
         view.resultUser()
+    }
+
+    override fun getPosts() {
+        interactor.getPosts()
+    }
+
+    override fun resultPosts(posts: MutableList<PostModel>) {
+        view.resultPosts(posts)
     }
 }

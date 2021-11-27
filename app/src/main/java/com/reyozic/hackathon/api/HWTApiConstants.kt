@@ -8,4 +8,5 @@ object HWTApiConstants {
     const val QUESTIONS_AFTER = QUESTIONS_GEN+"/after"
     const val QUESTIONS_WHILE = QUESTIONS_GEN+"/while"
     const val USERS = "users"
+    const val POSTS = "posts"
 }

@@ -38,4 +38,12 @@ class HWTInteractor(private val context: Context, private val mCallback: HWTInte
             }
         )
     }
+
+    override fun getPosts() {
+        firabaseService.getPosts({
+            mCallback.resultPosts(it)
+        },{
+            mCallback.errorService()
+        })
+    }
 }

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="@dimen/_10sdp"
+    app:cardCornerRadius="@dimen/_10sdp"
+    app:rippleColor="@color/primary_color"
+    android:clickable="true"
+    android:layout_margin="@dimen/_10sdp"
+    android:backgroundTint="@color/background_card">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/icon_post"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_equality"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/content_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:backgroundTint="@color/white"
+            app:cardElevation="@dimen/_5sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/date"
+                    style="@style/HWTTextTitleBottomSheet"
+                    android:text="27-Nov-2021"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/gray"/>
+
+                <TextView
+                    android:id="@+id/title"
+                    style="@style/HWTTextTitleBottomSheet"
+                    android:text="Titulo Post"
+                    android:textSize="@dimen/_17ssp"
+                    android:textColor="@color/color_text"
+                    android:textStyle="bold"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
